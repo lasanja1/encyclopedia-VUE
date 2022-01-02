@@ -1,10 +1,18 @@
 <template>
-    <button @click="action">{{ title }}</button>
+    <button @click="action"
+     value="post"
+    type="submit">{{ title }}</button>
 </template>
 
 <script>
 export default {
-    props: ['title', 'action']
+    props: {
+      title: String,
+      action: {
+        type: Function,
+        required: false,
+      }
+    }
 }
 </script>
 

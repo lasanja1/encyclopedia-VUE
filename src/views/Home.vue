@@ -2,7 +2,7 @@
   <div>
     <!-- <MainLayout>  -->
 
-    <Search />
+   <SearchInput /> 
     <ul v-if="characters">
       <li v-for="character in characters" :key="character.id">
         <router-link
@@ -29,12 +29,12 @@
 <script>
 import MainLayout from "@/components/MainLayout.vue";
 import Card from "@/components/Card.vue";
-import Search from "@/components/Search.vue";
+import SearchInput from "@/components/SearchInput.vue";
 import axios from "axios";
 
 export default {
   name: "Home",
-  components: { MainLayout, Card, Search },
+  components: { MainLayout, Card, SearchInput },
   data() {
     return {
       characters: null,
@@ -55,7 +55,7 @@ export default {
 ul {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-evenly;
+  justify-content: center;
   margin-top: 2rem;
 }
 li {
